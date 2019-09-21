@@ -1,0 +1,9 @@
+<input type="text" placeholder="message" [(ngModel)]="message">
+<select>
+    <option value="" >Select One</option>
+    <option value="Success" (click)="optionSelected('Success')">Success</option>
+    <option value="Warning" (click)="optionSelected('Warning')">Warning</option>
+    <option value="Error" (click)="optionSelected('Error')">Error</option>
+  </select> 
+<button (click)="submit()">Submit</button>
+<app-cards-list [data]="list"  (dismiss)="onDismiss($event)"></app-cards-list>
